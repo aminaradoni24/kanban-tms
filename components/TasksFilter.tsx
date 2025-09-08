@@ -1,6 +1,6 @@
 "use client"
 
-import { useRouter, useSearchParams, usePathname } from "next/navigation"
+import { useRouter, useSearchParams } from "next/navigation"
 import { Task } from "@/types/global"
 import { FaChevronDown } from "react-icons/fa"
 import { formUrlQuery } from "@/lib/url"
@@ -21,7 +21,7 @@ const TasksFilter = ({
   onClearFilters,
 }: TasksFilterProps) => {
   const router = useRouter()
-  const pathname = usePathname()
+
   const searchParams = useSearchParams()
 
   const assignees = Array.from(
