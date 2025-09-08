@@ -46,7 +46,7 @@ const TasksFilter = ({
   return (
     <div className='flex gap-4 flex-wrap mb-6 items-center'>
       {/* Assignee Filter */}
-      <div className='relative'>
+      <div className='relative z-10'>
         <select
           className='appearance-none px-4 py-2 pr-10 border border-gray-300 rounded-lg text-sm bg-white  text-gray-700  shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-400 transition'
           onChange={(e) => handleUpdateParams("assignee", e.target.value)}
@@ -66,7 +66,7 @@ const TasksFilter = ({
         <FaChevronDown className='pointer-events-none absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 ' />
       </div>
 
-      <div className='relative'>
+      <div className='relative z-10'>
         <select
           className='appearance-none px-4 py-2 pr-10 border border-gray-300 rounded-lg text-sm bg-white  text-gray-700  shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-400 transition'
           onChange={(e) => handleUpdateParams("tag", e.target.value)}

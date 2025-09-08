@@ -27,7 +27,7 @@ const Navigation = () => {
 
       {/* Sidebar */}
       <section
-        className={`fixed top-0 left-0 h-screen w-64 bg-[#e9f2ff] border-r border-gray-300 p-6 pt-20 transition-transform duration-300 lg:relative lg:translate-x-0 ${
+        className={`fixed top-0 left-0 h-screen w-64 bg-[#e9f2ff] border-r border-gray-300 p-6 pt-20 transition-transform duration-300 lg:relative lg:translate-x-0 z-30 ${
           isOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
