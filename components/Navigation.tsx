@@ -12,7 +12,7 @@ const Navigation = () => {
 
   const navLinks = [
     { href: ROUTES.HOME, label: "Home" },
-    { href: ROUTES.BACKLOGS, label: "BackLogs" },
+    { href: ROUTES.BACKLOGS, label: "Backlogs" },
     { href: ROUTES.TASKS, label: "Task List" },
   ]
 
