@@ -2,7 +2,7 @@
 
 import { Task } from "@/types/global"
 import Link from "next/link"
-import React, { useEffect, useState } from "react"
+import React, { Suspense, useEffect, useState } from "react"
 import TasksFilter from "@/components/TasksFilter"
 import SearchInput from "@/components/SearchInput"
 import { formUrlQuery, removeKeysFromUrlQuery } from "@/lib/url"
@@ -164,14 +164,15 @@ const Tasks = () => {
           onChange={handleSearchChange}
         />
 
-        <TasksFilter
-          tasks={tasks}
-          selectedAssignee={assigneeFilter}
-          selectedTag={tagFilter}
-          onFilterUpdate={handleFilterUpdate}
-          onClearFilters={clearFilters}
-        />
-
+        <Suspense fallback={<div>Loading filters...</div>}>
+          <TasksFilter
+            tasks={tasks}
+            selectedAssignee={assigneeFilter}
+            selectedTag={tagFilter}
+            onFilterUpdate={handleFilterUpdate}
+            onClearFilters={clearFilters}
+          />
+        </Suspense>
         <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
           {statuses.map((status) => (
             <div

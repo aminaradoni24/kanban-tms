@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useEffect, useState, useCallback } from "react"
+import React, { useEffect, useState, useCallback, Suspense } from "react"
 import { Task } from "@/types/global"
 import TasksFilter from "@/components/TasksFilter"
 import SearchInput from "@/components/SearchInput"
@@ -138,14 +138,15 @@ const BackLogs = () => {
         value={searchQuery}
         onChange={handleSearchChange}
       />
-
-      <TasksFilter
-        tasks={backlogTasks}
-        selectedAssignee={assigneeFilter}
-        selectedTag={tagFilter}
-        onFilterUpdate={handleFilterUpdate}
-        onClearFilters={clearFilters}
-      />
+      <Suspense fallback={<div>Loading filters...</div>}>
+        <TasksFilter
+          tasks={backlogTasks}
+          selectedAssignee={assigneeFilter}
+          selectedTag={tagFilter}
+          onFilterUpdate={handleFilterUpdate}
+          onClearFilters={clearFilters}
+        />
+      </Suspense>
 
       <BacklogList tasks={filteredTasks} onMove={moveToTasks} />
     </section>
