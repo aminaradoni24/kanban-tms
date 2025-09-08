@@ -1,36 +1,37 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## Project Name
 
-## Getting Started
+Kanban Task Management System
+
+## Setup Instruction
 
 First, run the development server:
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Architecture Overview
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Component Based
+- URL state management
+- Local Storage for Data
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Key Decisions and Tradeoffs
 
-## Learn More
+- Due to the limited time, I focused on implementing all the requested features successfully. Some performance optimizations could be further improved, but I prioritized delivering a complete and functional solution
 
-To learn more about Next.js, take a look at the following resources:
+## Testing Approach
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Lighthouse
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Time Spent
 
-## Deploy on Vercel
+7 hours
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## If I had more time:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- I would break the app into smaller, more modular components for better reusability. Some components could be server components for static data, while highly interactive ones would be client components.
+- I would focus more on performance optimizations.
+- I would create generalized styles, using variables for colors, spacing, and typography, to make theming and future updates easier.
+- I would improve the overall project structure, organizing files and components in a more maintainable way.
